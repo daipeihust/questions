@@ -393,6 +393,9 @@ Committer记账节点; Orderer排序节点; 交易处理流程; Gossip消息协�
 
 ## One
 
+协作; 治理; 数字资产; NFT; 治理模式; 设计原则; Fabric智能合约独立运行生命周期; GO高级用法; Fabric GO智能合约接口; Fabric JAVA智能合约接口; solidity高级用法; 智能合约升级过程; AI（联邦学习等）; 物联网; 隐私计算
+普通：15
+
 ### 简单
 
 1. 区块链在企业应用中，下面哪项是不需要考虑的要求：D
@@ -435,4 +438,26 @@ Committer记账节点; Orderer排序节点; 交易处理流程; Gossip消息协�
 
 > 解析：Solidity是静态类型语言，支持继承、库和复杂的用户定义类型等特性。故A项错误。
 
-6. 
+6. 下面关于智能合约Go接口说法正确的是：C
+    A.GetTxID是获取节点ID
+    B.GetTransient是获取交易附属信息
+    C.GetSignedProposal是获取交易提案所有相关数据
+    D.GetQueryResult是分页查询匹配局部复合键的所有键值
+
+> 解析：GetTxID是获取交易的交易ID；GetTransient是获取交易的临时信息，这类信息主要用于应用在程序级，并不写入账本数据；GetQueryResult是使用富查询方式查询状态数据库，状态数据库需要能够支持富查询功能；GetSignedProposal是获取交易提案所有相关数据。故C项正确。
+
+7. 下面关于只能合约JAVA接口说法错误的是：C
+    A.createCompositeKey功能是组合属性，形成复合键
+    B.splitCompositeKey功能是将复合键拆分成一系列属性
+    C.invokeChaincode功能是调用当前链码的Invoke方法
+    D.delState功能是在账本中删除一对键值
+
+> 解析：invokeChaincode功能是调用其它链码的Invoke方法。故C项错误。
+
+8. 下面关于智能合约升级说法错误的是：
+    A.只能升级控制器合约，不能对数据合约进行升级
+    B.对于多链场景，只需根据业务的需要来判断链与链之间的灰度策略，重复单链场景的升级即可
+    C.对于跨链场景，需要根据跨链两端的具体情况来制定升级方法
+    D.如果需要回退版本，只需要发布一个普通交易，将代理控制器合约的“Bank”映射到原版本的合约地址上即可
+
+9. 
